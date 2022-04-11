@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        tools:context=".TelaCadastro">
+
+        <ImageView
+            android:id="@+id/btn_voltar_TelaCadastro"
+            style="@style/BotoesPerfil"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_seta_esquerda2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/txt_titulo_cadastro_TelaCadastro"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/txt_titulo_cadastro_TelaCadastro"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            />
+
+        <TextView
+            android:id="@+id/txt_titulo_cadastro_TelaCadastro"
+            android:text="@string/title_cadastro"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/containerComponentes_TelaCadastro"
+            style="@style/TituloCadastro"
+            />
+
+        <View
+            android:id="@+id/containerComponentes_TelaCadastro"
+            style="@style/Componentes_cadastro"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_titulo_cadastro_TelaCadastro" />
+
+        <EditText
+            android:id="@+id/edt_nome_TelaCadastro"
+            style="@style/Edit_Text2"
+            android:hint="@string/nome"
+            android:inputType="text"
+            android:maxLength="60"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentes_TelaCadastro"
+            app:layout_constraintStart_toStartOf="@id/containerComponentes_TelaCadastro"
+            app:layout_constraintTop_toTopOf="@id/containerComponentes_TelaCadastro"
+            app:layout_constraintBottom_toTopOf="@id/edt_email_TelaCadastro"/>
+
+        <EditText
+            android:id="@+id/edt_email_TelaCadastro"
+            style="@style/Edit_Text2"
+            android:hint="@string/email"
+            android:drawableEnd="@drawable/ic_email"
+            android:inputType="textEmailAddress"
+            android:maxLength="60"
+            app:layout_constraintTop_toBottomOf="@id/edt_nome_TelaCadastro"
+            app:layout_constraintBottom_toTopOf="@id/edt_senha_TelaCadastro"
+            app:layout_constraintStart_toStartOf="@id/containerComponentes_TelaCadastro"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentes_TelaCadastro"
+            />
+
+        <EditText
+            android:id="@+id/edt_senha_TelaCadastro"
+            style="@style/Edit_Text2"
+            android:hint="@string/senha"
+            android:drawableEnd="@drawable/ic_eye"
+            android:inputType="textPassword"
+            android:maxLength="10"
+            app:layout_constraintTop_toBottomOf="@id/edt_email_TelaCadastro"
+            app:layout_constraintBottom_toTopOf="@id/edt_confirmar_senha_TelaCadastro"
+            app:layout_constraintStart_toStartOf="@id/containerComponentes_TelaCadastro"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentes_TelaCadastro"
+            />
+
+        <EditText
+            android:id="@+id/edt_confirmar_senha_TelaCadastro"
+            style="@style/Edit_Text2"
+            android:hint="@string/conf_senha"
+            android:drawableEnd="@drawable/ic_eye"
+            android:inputType="textPassword"
+            android:maxLength="10"
+            app:layout_constraintTop_toBottomOf="@id/edt_senha_TelaCadastro"
+            app:layout_constraintBottom_toTopOf="@id/edt_telefone_TelaCadastro"
+            app:layout_constraintStart_toStartOf="@id/containerComponentes_TelaCadastro"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentes_TelaCadastro"
+            />
+
+        <EditText
+            android:id="@+id/edt_telefone_TelaCadastro"
+            style="@style/Edit_Text2"
+            android:hint="@string/telefone"
+            android:drawableEnd="@drawable/ic_telefone"
+            android:inputType="phone"
+            android:maxLength="11"
+            app:layout_constraintTop_toBottomOf="@id/edt_confirmar_senha_TelaCadastro"
+            app:layout_constraintBottom_toTopOf="@id/edt_data_nascimento_TelaCadastro"
+            app:layout_constraintStart_toStartOf="@id/containerComponentes_TelaCadastro"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentes_TelaCadastro"
+            />
+
+        <EditText
+            android:id="@+id/edt_data_nascimento_TelaCadastro"
+            style="@style/Edit_Text2"
+            android:hint="@string/dt_nascimento"
+            android:drawableEnd="@drawable/ic_data"
+            android:inputType="date"
+            android:maxLength="10"
+            app:layout_constraintTop_toBottomOf="@id/edt_telefone_TelaCadastro"
+            app:layout_constraintBottom_toTopOf="@id/cbx_termos_TelaCadastro"
+            app:layout_constraintStart_toStartOf="@id/containerComponentes_TelaCadastro"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentes_TelaCadastro"
+            />
+
+        <CheckBox
+            android:id="@+id/cbx_termos_TelaCadastro"
+            android:text="@string/termos_condicoes"
+            style="@style/CheckBoxCadastro"
+            app:layout_constraintStart_toStartOf="@id/containerComponentes_TelaCadastro"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentes_TelaCadastro"
+            app:layout_constraintTop_toBottomOf="@id/edt_data_nascimento_TelaCadastro"
+            app:layout_constraintBottom_toTopOf="@id/btn_salvar_TelaCadastro"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_salvar_TelaCadastro"
+            style="@style/Botao"
+            android:text="@string/cadastrar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cbx_termos_TelaCadastro"
+            app:layout_constraintBottom_toBottomOf="@id/containerComponentes_TelaCadastro"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

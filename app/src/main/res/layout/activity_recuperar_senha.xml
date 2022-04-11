@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    amdroid:layout_width="match_parent"
+    amdroid:layout_height="match_parent"
+    amdroid:fillViewport="true"
+    xmlns:amdroid="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        amdroid:layout_width="match_parent"
+        amdroid:layout_height="match_parent"
+        amdroid:background="@drawable/background"
+        tools:context=".TelaLogin">
+
+        <ImageView
+            amdroid:id="@+id/btn_voltar_RecuperarSenha"
+            style="@style/BotoesPerfil"
+            amdroid:layout_margin="10dp"
+            amdroid:src="@drawable/ic_seta_esquerda2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/logo_RecuperarSenha"
+            amdroid:foreground="?attr/selectableItemBackgroundBorderless"
+            />
+
+        <ImageView
+            amdroid:id="@+id/logo_RecuperarSenha"
+            amdroid:layout_width="240dp"
+            amdroid:layout_height="200dp"
+            amdroid:src="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/containerComponentes_RecuperarSenha"
+            />
+
+        <View
+            amdroid:id="@+id/containerComponentes_RecuperarSenha"
+            style="@style/Componentes"
+            amdroid:layout_height="372dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo_RecuperarSenha" />
+
+        <TextView
+            amdroid:id="@+id/txt_primeiro_titulo_RecuperarSenha"
+            amdroid:layout_width="300dp"
+            amdroid:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/containerComponentes_RecuperarSenha"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentes_RecuperarSenha"
+            app:layout_constraintTop_toTopOf="@id/containerComponentes_RecuperarSenha"
+            app:layout_constraintBottom_toTopOf="@id/edt_primeiro_campo_RecuperarSenha"
+            amdroid:text="@string/recuperar_senha_titulo_um"
+            amdroid:textSize="20sp"
+            amdroid:textColor="@color/black"
+            amdroid:textAlignment="center"
+            amdroid:layout_marginTop="10dp"
+            />
+
+        <EditText
+            amdroid:id="@+id/edt_primeiro_campo_RecuperarSenha"
+            style="@style/Edit_Text"
+            amdroid:hint="@string/email"
+            amdroid:inputType="textEmailAddress"
+            app:layout_constraintStart_toStartOf="@id/containerComponentes_RecuperarSenha"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentes_RecuperarSenha"
+            app:layout_constraintTop_toBottomOf="@id/txt_primeiro_titulo_RecuperarSenha"
+            app:layout_constraintBottom_toTopOf="@id/txt_segundo_titulo_RecuperarSenha"
+            />
+
+        <TextView
+            amdroid:id="@+id/txt_segundo_titulo_RecuperarSenha"
+            amdroid:layout_width="wrap_content"
+            amdroid:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/edt_primeiro_campo_RecuperarSenha"
+            app:layout_constraintBottom_toTopOf="@id/edt_segundo_campo_RecuperarSenha"
+            app:layout_constraintStart_toStartOf="@id/containerComponentes_RecuperarSenha"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentes_RecuperarSenha"
+            amdroid:text="@string/recuperar_senha_titulo_dois"
+            amdroid:textSize="20sp"
+            amdroid:textColor="@color/black"
+            amdroid:layout_marginTop="10dp"
+            amdroid:visibility="invisible"
+            />
+
+        <EditText
+            amdroid:id="@+id/edt_segundo_campo_RecuperarSenha"
+            style="@style/Edit_Text"
+            amdroid:hint="@string/codigo"
+            amdroid:inputType="textPassword"
+            app:layout_constraintStart_toStartOf="@id/containerComponentes_RecuperarSenha"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentes_RecuperarSenha"
+            app:layout_constraintTop_toBottomOf="@id/txt_segundo_titulo_RecuperarSenha"
+            app:layout_constraintBottom_toTopOf="@id/btn_verificar_senha_RecuperarSenha"
+            amdroid:visibility="invisible"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            amdroid:id="@+id/btn_verificar_senha_RecuperarSenha"
+            style="@style/Botao"
+            amdroid:text="@string/enviar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_segundo_campo_RecuperarSenha"
+            app:layout_constraintBottom_toBottomOf="@id/containerComponentes_RecuperarSenha"
+            amdroid:layout_marginTop="15dp"
+            amdroid:layout_marginBottom="10dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

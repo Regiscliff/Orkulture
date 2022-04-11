@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:openDrawer="start"
+    android:id="@+id/drawer_layout_TelaConfiguracoes">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background2"
+        tools:context=".Perfil">
+
+        <ImageView
+            android:id="@+id/btn_menu_TelaConfiguracoes"
+            style="@style/BotoesPerfil"
+            android:layout_marginStart="6dp"
+            android:src="@drawable/ic_menu"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/txt_titulo_TelaConfiguracoes"
+            app:layout_constraintBottom_toTopOf="@id/dados"
+            />
+
+        <TextView
+            android:id="@+id/txt_titulo_TelaConfiguracoes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/dados"
+            android:text="@string/configuracoes"
+            android:layout_margin="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            />
+
+        <ImageView
+            android:id="@+id/btn_deslogar_TelaConfiguracoes"
+            style="@style/BotoesPerfil"
+            android:layout_marginEnd="6dp"
+            android:src="@drawable/ic_sair"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/txt_titulo_TelaConfiguracoes"
+            app:layout_constraintBottom_toTopOf="@id/dados"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            />
+
+        <View
+            android:id="@+id/dados"
+            style="@style/Componentes_perfil"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="80dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- Os itens vcs colocam aqui!-->
+
+                <TextView
+                    android:id="@+id/titulo_TelaConfiguracoes"
+                    android:text="@string/informacoes_da_conta"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    android:layout_margin="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/edt_nome_TelaConfiguracoes"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <EditText
+                    android:id="@+id/edt_nome_TelaConfiguracoes"
+                    style="@style/Edit_Text"
+                    android:inputType="text"
+                    android:hint="@string/nome"
+                    app:layout_constraintBottom_toTopOf="@id/edt_email_TelaConfiguracoes"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/titulo_TelaConfiguracoes"
+                    />
+
+                <EditText
+                    android:id="@+id/edt_email_TelaConfiguracoes"
+                    style="@style/Edit_Text"
+                    android:hint="@string/email"
+                    android:inputType="textPersonName|textEmailAddress"
+                    app:layout_constraintBottom_toTopOf="@+id/edt_senha_TelaConfiguracoes"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_nome_TelaConfiguracoes"/>
+
+                <EditText
+                    android:id="@+id/edt_senha_TelaConfiguracoes"
+                    style="@style/Edit_Text"
+                    android:hint="@string/senha"
+                    android:inputType="textPassword"
+                    app:layout_constraintBottom_toTopOf="@id/edt_telefone_TelaConfiguracoes"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_email_TelaConfiguracoes"
+                    />
+
+                <EditText
+                    android:id="@+id/edt_telefone_TelaConfiguracoes"
+                    style="@style/Edit_Text"
+                    android:hint="@string/telefone"
+                    android:inputType="number"
+                    app:layout_constraintBottom_toTopOf="@id/btn_salvar_TelaConfiguracoes"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_senha_TelaConfiguracoes"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_salvar_TelaConfiguracoes"
+                    style="@style/Botao"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/salvar"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_telefone_TelaConfiguracoes"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <View
+            android:id="@+id/menu"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dados" />
+
+        <ImageView
+            android:id="@+id/btn_chat_TelaConfiguracoes"
+            style="@style/BotoesPerfil"
+            android:layout_marginStart="6dp"
+            android:src="@drawable/ic_chat"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@id/menu"
+            app:layout_constraintRight_toLeftOf="@id/btn_buscar_TelaConfiguracoes"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            />
+
+        <ImageView
+            android:id="@+id/btn_buscar_TelaConfiguracoes"
+            style="@style/BotoesPerfil"
+            android:src="@drawable/ic_buscar"
+            android:layout_marginStart="14dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/btn_chat_TelaConfiguracoes"
+            app:layout_constraintRight_toLeftOf="@id/btn_inicio_TelaConfiguracoes"
+            app:layout_constraintTop_toTopOf="@id/menu"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            />
+
+        <ImageView
+            android:id="@+id/btn_inicio_TelaConfiguracoes"
+            style="@style/BotoesPerfil"
+            android:layout_marginStart="22dp"
+            android:src="@drawable/ic_home"
+            app:layout_constraintLeft_toRightOf="@id/btn_buscar_TelaConfiguracoes"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@id/menu"
+            app:layout_constraintRight_toLeftOf="@id/btn_grupos_TelaConfiguracoes"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            />
+
+        <ImageView
+            android:id="@+id/btn_grupos_TelaConfiguracoes"
+            style="@style/BotoesPerfil"
+            android:layout_marginStart="22dp"
+            android:src="@drawable/ic_grupos"
+            android:layout_marginEnd="14dp"
+            app:layout_constraintLeft_toRightOf="@id/btn_inicio_TelaConfiguracoes"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@id/menu"
+            app:layout_constraintRight_toLeftOf="@id/btn_configuracoes_TelaConfiguracoes"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            />
+
+        <ImageView
+            android:id="@+id/btn_configuracoes_TelaConfiguracoes"
+            style="@style/BotoesPerfil"
+            android:layout_marginEnd="6dp"
+            android:src="@drawable/ic_configuracoes"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/menu"
+            app:layout_constraintLeft_toRightOf="@id/btn_grupos_TelaConfiguracoes"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:headerLayout="@layout/heather_layout"
+        android:id="@+id/navigation_view_TelaConfiguracoes"
+        android:layout_gravity="start"
+        app:itemTextColor="@color/black"
+        app:menu="@menu/options"
+        />
+
+</androidx.drawerlayout.widget.DrawerLayout>

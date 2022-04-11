@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/field_perfil"
+            android:icon="@drawable/ic_user"
+            android:title="Perfil"
+            />
+
+    </group>
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/field_filmes"
+            android:icon="@drawable/ic_filme"
+            android:title="Filmes"
+            />
+
+        <item
+            android:id="@+id/field_series"
+            android:icon="@drawable/ic_serie"
+            android:title="Séries"
+            />
+
+        <item
+            android:id="@+id/field_livros"
+            android:icon="@drawable/ic_livro"
+            android:title="Livros"
+            />
+
+        <item
+            android:id="@+id/field_musicas"
+            android:icon="@drawable/ic_musica"
+            android:title="Músicas"
+            />
+
+    </group>
+
+
+</menu>

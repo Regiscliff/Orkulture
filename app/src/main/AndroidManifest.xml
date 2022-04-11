@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.orkulture">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icone"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icone"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Orkulture">
+        <activity
+            android:name=".itens_menu_inferior.TelaInicial"
+            android:exported="false" />
+        <activity
+            android:name=".itens_menu_inferior.TelaAmigo"
+            android:exported="false" />
+        <activity
+            android:name=".itens_tela_chat.TelaChatGrupo"
+            android:exported="false" />
+        <activity
+            android:name=".itens_menu_inferior.CriarGrupo"
+            android:exported="false" />
+        <activity
+            android:name=".itens_menu_inferior.TelaGruposAmigos"
+            android:exported="false" />
+        <activity
+            android:name=".itens_tela_chat.ListaContatos"
+            android:exported="false" />
+        <activity
+            android:name=".RecuperarSenha"
+            android:exported="false" />
+        <activity
+            android:name=".itens_menu_inferior.TelaConfiguracoes"
+            android:exported="false" />
+        <activity
+            android:name=".itens_menu_inferior.ListaConversas"
+            android:exported="false" />
+        <activity
+            android:name=".itens_menu_inferior.TelaBusca"
+            android:exported="false" />
+        <activity
+            android:name=".itens_menu_lateral.TelaMusicas"
+            android:exported="false" />
+        <activity
+            android:name=".itens_menu_lateral.TelaLivros"
+            android:exported="false" />
+        <activity
+            android:name=".itens_menu_lateral.TelaSeries"
+            android:exported="false" />
+        <activity
+            android:name=".itens_menu_lateral.TelaFilmes"
+            android:exported="false" />
+        <activity
+            android:name=".itens_tela_chat.TelaChat"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".itens_menu_inferior.ListaConversas" />
+        </activity>
+        <activity
+            android:name=".Perfil"
+            android:exported="false" />
+        <activity
+            android:name=".TelaCadastro"
+            android:exported="false" />
+        <activity
+            android:name=".TelaLogin"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

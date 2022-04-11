@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    tools:context=".itens_menu_inferior.CriarGrupo">
+
+    <ImageView
+        android:id="@+id/btn_voltar_CriarGrupo"
+        style="@style/BotoesPerfil"
+        android:layout_marginStart="6dp"
+        android:src="@drawable/ic_seta_esquerda"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/dados"
+        app:layout_constraintRight_toLeftOf="@id/txt_titulo_CriarGrupo"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        />
+
+    <TextView
+        android:id="@+id/txt_titulo_CriarGrupo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/dados"
+        android:text="@string/criar_um_grupo"
+        android:layout_margin="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        />
+
+    <View
+        android:id="@+id/dados"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="@drawable/container_componentes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="80dp"
+        />
+
+    <View
+        android:id="@+id/btn_foto_grupo_CriarGrupo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/container_usuario"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/dados"
+        app:layout_constraintBottom_toTopOf="@id/txt_foto_grupo_CriarGrupo"
+        android:layout_marginTop="10dp"
+        />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_foto_CriarGrupo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_user"
+        app:layout_constraintBottom_toBottomOf="@id/btn_foto_grupo_CriarGrupo"
+        app:layout_constraintEnd_toEndOf="@id/btn_foto_grupo_CriarGrupo"
+        app:layout_constraintStart_toStartOf="@id/btn_foto_grupo_CriarGrupo"
+        app:layout_constraintTop_toTopOf="@id/btn_foto_grupo_CriarGrupo"
+        />
+
+    <TextView
+        android:id="@+id/txt_foto_grupo_CriarGrupo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_foto_grupo_CriarGrupo"
+        app:layout_constraintBottom_toTopOf="@id/edt_nome_grupo_CriarGrupo"
+        android:text="@string/capa_do_grupo"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        />
+
+    <EditText
+        android:id="@+id/edt_nome_grupo_CriarGrupo"
+        style="@style/Edit_Text"
+        android:hint="@string/nome_do_grupo"
+        android:maxLength="50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_foto_grupo_CriarGrupo"
+        app:layout_constraintBottom_toTopOf="@id/spn_categoria_grupo_CriarGrupo"
+        />
+
+    <Spinner
+        android:id="@+id/spn_categoria_grupo_CriarGrupo"
+        style="@style/Edit_Text"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_nome_grupo_CriarGrupo"
+        app:layout_constraintBottom_toTopOf="@id/edt_nome_obra_CriarGrupo"
+        />
+
+    <EditText
+        android:id="@+id/edt_nome_obra_CriarGrupo"
+        style="@style/Edit_Text"
+        android:hint="@string/nome_da_obra"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spn_categoria_grupo_CriarGrupo"
+        app:layout_constraintBottom_toTopOf="@id/btn_salvar_CriarGrupo"
+        android:visibility="invisible"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_salvar_CriarGrupo"
+        style="@style/Botao"
+        android:text="@string/salvar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_nome_obra_CriarGrupo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

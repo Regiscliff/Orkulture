@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    tools:context=".itens_tela_chat.ListaContatos">
+
+    <ImageView
+        android:id="@+id/btn_voltar_ListaContatos"
+        style="@style/BotoesPerfil"
+        android:layout_marginStart="6dp"
+        android:src="@drawable/ic_seta_esquerda"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/dados"
+        app:layout_constraintRight_toLeftOf="@id/txt_titulo_ListaContatos"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        />
+
+    <TextView
+        android:id="@+id/txt_titulo_ListaContatos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/dados"
+        android:text="@string/selecione_um_contato"
+        android:layout_margin="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        />
+
+    <View
+        android:id="@+id/dados"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="@drawable/container_componentes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="80dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_contatos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/dados"
+        app:layout_constraintBottom_toBottomOf="@id/dados"
+        android:layout_marginTop="80dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

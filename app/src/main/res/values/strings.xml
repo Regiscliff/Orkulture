@@ -1,0 +1,92 @@
+<resources>
+
+    <string name="app_name">Orkulture</string>
+    <string name="entrar">Entrar</string>
+    <string name="text_cadastro">Ainda não possui cadastro? Clique aqui</string>
+    <string name="esqueci_minha_senha">Esqueci minha senha</string>
+
+    <string name="title_cadastro">Cadastre-se</string>
+    <string name="nome">Nome</string>
+    <string name="email">E-mail</string>
+    <string name="senha">Senha</string>
+    <string name="conf_senha">Confirmar senha</string>
+    <string name="telefone">Telefone</string>
+    <string name="dt_nascimento">Data de nascimento</string>
+    <string name="termos_condicoes">Li e aceito os termos e condições</string>
+    <string name="cadastrar">Cadastrar</string>
+
+    <string name="salvar">Salvar</string>
+
+    <string name="perfil">Perfil</string>
+    <string name="sobre_mim">Sobre mim:</string>
+
+    <string name="filmes">Filmes</string>
+    <string name="filme_preferido">Filme preferido</string>
+    <string name="detalhes_filme">Nome: \n\nGênero: \n\nAno:\n\nSinopse:</string>
+    <string name="remover_filme">Remover filme</string>
+
+    <string name="musicas">Músicas</string>
+    <string name="musica_preferida">Música preferida</string>
+    <string name="detalhes_musica">Nome: \n\nCantor(a) \n\nGênero: \n\nÁlbum:</string>
+    <string name="remover_musica">Remover música</string>
+
+    <string name="series">Séries</string>
+    <string name="serie_preferida">Série preferida</string>
+    <string name="detalhes_serie">Nome: \n\nGênero: \n\nAno:\n\nSinopse:</string>
+    <string name="remover_serie">Remover série</string>
+
+    <string name="livros">Livros</string>
+    <string name="livro_preferido">Livro preferido</string>
+    <string name="detalhes_livro">Nome: \n\nGênero: \n\nAutor(a) \n\nAno:</string>
+    <string name="remover_livro">Remover livro</string>
+
+    <string name="criar_um_grupo">Criar um grupo</string>
+    <string name="capa_do_grupo">Capa do grupo</string>
+    <string name="nome_do_grupo">Nome do grupo</string>
+    <string name="nome_da_obra">Nome da obra</string>
+
+    <string name="selecione_um_contato">Selecione um contato</string>
+    <string name="conversas">Conversas</string>
+    <string name="nova_conversa">Nova conversa</string>
+    <string name="buscar_conversa">Buscar conversa</string>
+
+    <string name="codigo">Código</string>
+    <string name="enviar">Enviar</string>
+    <string name="recuperar_senha_titulo_um">Para recuperar a senha, informe o e-mail cadastrado:</string>
+    <string name="recuperar_senha_titulo_dois">Informe o código enviado ao e-mail</string>
+
+    <string name="perfil_de_amigo">Perfil de amigo</string>
+    <string name="nome_amigo">Amigo X</string>
+    <string name="filmes_preferidos_amigo">Maze Runner: Correr ou Morrer \nJogos Vorazes \nTruque de Mestre</string>
+    <string name="series_preferidas_amigo">Sense8 \nLa Casa de Papel \nRound 6</string>
+    <string name="livros_preferidos_amigo">Harry Potter e o enigma do príncipe \nAs crônicas de Narnia</string>
+    <string name="musicas_preferidas_amigo">Fire Meet Gasoline - SIA \nA última noite - Jão \nTempo perdido - Legião Urbana</string>
+
+    <string name="buscar_pessoas_e_grupos">Buscar pessoas e grupos</string>
+
+    <string name="chat">Chat</string>
+    <string name="digite_sua_mensagem">Digite sua mensagem</string>
+
+    <string name="chat_do_grupo">Chat do grupo</string>
+    <string name="chat_grupo_1">Bianca: \nGente, vcs viram o trailler do novo animais fantásticos?</string>
+    <string name="chat_grupo_2">Rhenan: \nNoooossa, vi e parece q tá top! Vcs vão assistir?</string>
+    <string name="chat_grupo_3">Karol: \nSim, vi ontem e amei! Vou sim Rhenan, vamos juntos?</string>
+
+    <string name="configuracoes">Configurações</string>
+    <string name="informacoes_da_conta">Informações da conta:</string>
+
+    <string name="tela_inicial">Tela Inicial</string>
+
+    <string name="grupos_e_amigos">Grupos e Amigos</string>
+    <string name="novo_grupo">Novo grupo</string>
+    <string name="meus_grupos">Meus grupos</string>
+    <string name="meus_amigos">Meus amigos</string>
+
+    <string-array name="categorias">
+        <item>Filme</item>
+        <item>Série</item>
+        <item>Livro</item>
+        <item>Música</item>
+    </string-array>
+
+</resources>

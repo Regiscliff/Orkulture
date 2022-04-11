@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:openDrawer="start"
+    android:id="@+id/drawer_layout_TelaGruposAmigos">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background2"
+        tools:context=".itens_menu_inferior.ListaConversas">
+
+        <ImageView
+            android:id="@+id/btn_menu_TelaGruposAmigos"
+            style="@style/BotoesPerfil"
+            android:layout_marginStart="6dp"
+            android:src="@drawable/ic_menu"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/txt_titulo_TelaGruposAmigos"
+            app:layout_constraintBottom_toTopOf="@id/dados"
+            />
+
+        <TextView
+            android:id="@+id/txt_titulo_TelaGruposAmigos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/dados"
+            android:text="@string/grupos_e_amigos"
+            android:layout_margin="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            />
+
+        <ImageView
+            android:id="@+id/btn_deslogar_TelaGruposAmigos"
+            style="@style/BotoesPerfil"
+            android:layout_marginEnd="6dp"
+            android:src="@drawable/ic_sair"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/txt_titulo_TelaGruposAmigos"
+            app:layout_constraintBottom_toTopOf="@id/dados"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            />
+
+        <View
+            android:id="@+id/dados"
+            style="@style/Componentes_perfil"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="80dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/btn_novo_grupo_TelaGruposAmigos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/linha_TelaGruposAmigos"
+                    android:text="@string/novo_grupo"
+                    android:textSize="30sp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    app:drawableStartCompat="@drawable/ic_plus" />
+
+                <View
+                    android:id="@+id/linha_TelaGruposAmigos"
+                    style="@style/Divider.Horizontal"
+                    android:layout_margin="30dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btn_novo_grupo_TelaGruposAmigos"
+                    app:layout_constraintBottom_toTopOf="@id/txt_grupos_TelaGruposAmigos"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_grupos_TelaGruposAmigos"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/linha_TelaGruposAmigos"
+                    app:layout_constraintBottom_toTopOf="@id/rcv_grupos_TelaGruposAmigos"
+                    android:text="@string/meus_grupos"
+                    android:textSize="24sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcv_grupos_TelaGruposAmigos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_grupos_TelaGruposAmigos"
+                    app:layout_constraintBottom_toTopOf="@id/linha2_TelaGruposAmigos"
+                    />
+
+                <View
+                    android:id="@+id/linha2_TelaGruposAmigos"
+                    style="@style/Divider.Horizontal"
+                    android:layout_margin="30dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rcv_grupos_TelaGruposAmigos"
+                    app:layout_constraintBottom_toTopOf="@id/txt_amigos_TelaGruposAmigos"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_amigos_TelaGruposAmigos"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/linha2_TelaGruposAmigos"
+                    app:layout_constraintBottom_toTopOf="@id/rcv_amigos_TelaGruposAmigos"
+                    android:text="@string/meus_amigos"
+                    android:textSize="24sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcv_amigos_TelaGruposAmigos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_amigos_TelaGruposAmigos"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <View
+            android:id="@+id/menu"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dados" />
+
+        <ImageView
+            android:id="@+id/btn_chat_TelaGruposAmigos"
+            style="@style/BotoesPerfil"
+            android:layout_marginStart="6dp"
+            android:src="@drawable/ic_chat"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@id/menu"
+            app:layout_constraintRight_toLeftOf="@id/btn_buscar_TelaGruposAmigos"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            />
+
+        <ImageView
+            android:id="@+id/btn_buscar_TelaGruposAmigos"
+            style="@style/BotoesPerfil"
+            android:src="@drawable/ic_buscar"
+            android:layout_marginStart="14dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/btn_chat_TelaGruposAmigos"
+            app:layout_constraintRight_toLeftOf="@id/btn_inicio_TelaGruposAmigos"
+            app:layout_constraintTop_toTopOf="@id/menu"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            />
+
+        <ImageView
+            android:id="@+id/btn_inicio_TelaGruposAmigos"
+            style="@style/BotoesPerfil"
+            android:layout_marginStart="22dp"
+            android:src="@drawable/ic_home"
+            app:layout_constraintLeft_toRightOf="@id/btn_buscar_TelaGruposAmigos"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@id/menu"
+            app:layout_constraintRight_toLeftOf="@id/btn_grupos_TelaGruposAmigos"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            />
+
+        <ImageView
+            android:id="@+id/btn_grupos_TelaGruposAmigos"
+            style="@style/BotoesPerfil"
+            android:layout_marginStart="22dp"
+            android:src="@drawable/ic_grupos"
+            android:layout_marginEnd="14dp"
+            app:layout_constraintLeft_toRightOf="@id/btn_inicio_TelaGruposAmigos"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@id/menu"
+            app:layout_constraintRight_toLeftOf="@id/btn_configuracoes_TelaGruposAmigos"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            />
+
+        <ImageView
+            android:id="@+id/btn_configuracoes_TelaGruposAmigos"
+            style="@style/BotoesPerfil"
+            android:layout_marginEnd="6dp"
+            android:src="@drawable/ic_configuracoes"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/menu"
+            app:layout_constraintLeft_toRightOf="@id/btn_grupos_TelaGruposAmigos"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:headerLayout="@layout/heather_layout"
+        android:id="@+id/navigation_view_TelaGruposAmigos"
+        android:layout_gravity="start"
+        app:itemTextColor="@color/black"
+        app:menu="@menu/options"
+        />
+
+</androidx.drawerlayout.widget.DrawerLayout>

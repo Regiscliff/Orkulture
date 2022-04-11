@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "97022881834",
+    "project_id": "orkulture",
+    "storage_bucket": "orkulture.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:97022881834:android:3588d0f4df76375f0a5353",
+        "android_client_info": {
+          "package_name": "com.example.orkulture"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "97022881834-ci2ek054c1j0sddas7vpnkdjum5bqurp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzPcNbPv3YFBnN1bBXCqqA4-i0aBFIUpU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "97022881834-ci2ek054c1j0sddas7vpnkdjum5bqurp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

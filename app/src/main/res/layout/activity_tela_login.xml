@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    amdroid:layout_width="match_parent"
+    amdroid:layout_height="match_parent"
+    amdroid:fillViewport="true"
+    xmlns:amdroid="http://schemas.android.com/apk/res/android">
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".TelaLogin">
+
+    <ImageView
+        android:id="@+id/logo_TelaLogin"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/containerComponentes_TelaLogin"/>
+
+    <View
+        android:id="@+id/containerComponentes_TelaLogin"
+        style="@style/Componentes"
+        android:layout_height="302dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo_TelaLogin"
+        app:layout_constraintBottom_toTopOf="@id/barra_progresso_TelaLogin"/>
+
+    <EditText
+        android:id="@+id/edt_email_TelaLogin"
+        style="@style/Edit_Text"
+        android:hint="@string/email"
+        android:drawableEnd="@drawable/ic_email"
+        android:inputType="textEmailAddress"
+        android:maxLength="60"
+        app:layout_constraintStart_toStartOf="@id/containerComponentes_TelaLogin"
+        app:layout_constraintEnd_toEndOf="@id/containerComponentes_TelaLogin"
+        app:layout_constraintTop_toTopOf="@id/containerComponentes_TelaLogin"
+        app:layout_constraintBottom_toTopOf="@id/edt_senha_TelaLogin"
+        />
+
+    <EditText
+        android:id="@+id/edt_senha_TelaLogin"
+        style="@style/Edit_Text"
+        android:hint="@string/senha"
+        android:drawableEnd="@drawable/ic_eye"
+        android:inputType="textPassword"
+        android:maxLength="10"
+        app:layout_constraintStart_toStartOf="@id/containerComponentes_TelaLogin"
+        app:layout_constraintEnd_toEndOf="@id/containerComponentes_TelaLogin"
+        app:layout_constraintTop_toBottomOf="@id/edt_email_TelaLogin"
+        app:layout_constraintBottom_toTopOf="@id/btn_entrar_TelaLogin"
+        />
+
+    <TextView
+        android:id="@+id/btn_esqueci_senha_TelaLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/edt_senha_TelaLogin"
+        app:layout_constraintBottom_toTopOf="@id/btn_entrar_TelaLogin"
+        app:layout_constraintStart_toStartOf="@id/containerComponentes_TelaLogin"
+        app:layout_constraintEnd_toEndOf="@id/containerComponentes_TelaLogin"
+        android:text="@string/esqueci_minha_senha"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_entrar_TelaLogin"
+        style="@style/Botao"
+        android:text="@string/entrar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_esqueci_senha_TelaLogin"
+        app:layout_constraintBottom_toBottomOf="@id/containerComponentes_TelaLogin"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        />
+
+    <ProgressBar
+        android:id="@+id/barra_progresso_TelaLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:indeterminateTint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/containerComponentes_TelaLogin"
+        app:layout_constraintBottom_toTopOf="@id/btn_cadastrar_TelaLogin"
+        />
+
+    <TextView
+        android:id="@+id/btn_cadastrar_TelaLogin"
+        android:text="@string/text_cadastro"
+        style="@style/TextoParaCadastro"
+        app:layout_constraintTop_toBottomOf="@id/barra_progresso_TelaLogin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
